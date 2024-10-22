@@ -1,7 +1,15 @@
 import express from "express";
+import dotenv from "dotenv";
+import authRoutes from "./routes/auth.route.js";
+import { connectDB } from "./lib/db.js";
 
 const app = express();
 
-app.listen(5000, () => {
-    console.log("App is listening on port 5000");
+dotenv.config();
+const PORT = process.env.PORT || 5000;
+
+app.use("/api/auth", authRoutes);
+app.listen(PORT, () => {
+  console.log("App is listening on http://localhost:" + PORT);
+  connectDB();
 });
