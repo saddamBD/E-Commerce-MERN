@@ -1,14 +1,7 @@
-import './App.css'
-
-function App() {
-  
-
+export default function App() {
   return (
-    <>
-      <h1>This is MERN APP</h1>	
-        
-    </>
+    <h1 className="text-3xl font-bold underline text-red-500">
+      Hello MERN
+    </h1>
   )
 }
-
-export default App
