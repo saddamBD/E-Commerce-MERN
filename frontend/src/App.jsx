@@ -11,6 +11,7 @@ import AdminPage from "./pages/AdminPage"
 import CategoryPage from "./pages/CategoryPage"
 import CartPage from "./pages/CartPage"
 import { useCartStore } from "./stores/useCartStore"
+import PurchaseSuccessPage from "./pages/PurchaseSuccessPage"
 
 function App() {
   const {user,checkAuth,checkingAuth} = useUserStore()
