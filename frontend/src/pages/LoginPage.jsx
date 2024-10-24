@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { LogIn, Mail, Lock, ArrowRight, Loader } from "lucide-react";
 import { useUserStore } from "../stores/useUserStore";
+import { Helmet } from "react-helmet";
 
 const LoginPage = () => {
 	const [email, setEmail] = useState("");
@@ -15,9 +16,15 @@ const LoginPage = () => {
 		console.log(email, password);
 		login(email, password);
 	};
+	
 
 	return (
+		
 		<div className='flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
+		<Helmet htmlAttributes>
+        <html lang="en" />
+        <title>Login</title>
+      </Helmet>
 			<motion.div
 				className='sm:mx-auto sm:w-full sm:max-w-md'
 				initial={{ opacity: 0, y: -20 }}

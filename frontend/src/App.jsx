@@ -13,6 +13,9 @@ import CartPage from "./pages/CartPage"
 import { useCartStore } from "./stores/useCartStore"
 import PurchaseSuccessPage from "./pages/PurchaseSuccessPage"
 import PurchaseCancelPage from "./pages/PurchaseCancelPage"
+import Footer from "./components/Footer"
+import FAQPage from "./pages/FAQPage"
+
 
 function App() {
   const {user,checkAuth,checkingAuth} = useUserStore()
@@ -32,7 +35,6 @@ function App() {
 
 
   return (
-
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
       			<div className='absolute inset-0 overflow-hidden'>
 				<div className='absolute inset-0'>
@@ -62,8 +64,11 @@ function App() {
 						element={user ? <PurchaseSuccessPage /> : <Navigate to='/login' />}
 					/>
           <Route path='/purchase-cancel' element={user ? <PurchaseCancelPage /> : <Navigate to='/login' />} />
+          <Route path='/faqs' element={<FAQPage />} />
       </Routes>
       </div>
+      
+      <Footer />
       <Toaster/>
     </div>
    

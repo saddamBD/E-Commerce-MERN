@@ -1,10 +1,15 @@
 import { XCircle, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const PurchaseCancelPage = () => {
 	return (
 		<div className='min-h-screen flex items-center justify-center px-4'>
+			<Helmet htmlAttributes>
+        <html lang="en" />
+        <title>Purchase Cancel</title>
+      </Helmet>
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}

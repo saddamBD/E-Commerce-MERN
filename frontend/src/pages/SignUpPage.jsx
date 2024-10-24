@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { UserPlus, Mail, Lock, User, ArrowRight, Loader } from "lucide-react";
 import { motion } from "framer-motion";
 import { useUserStore } from "../stores/useUserStore";
+import { Helmet } from "react-helmet";
 
 
 const SignUpPage = () => {
@@ -22,6 +23,10 @@ const SignUpPage = () => {
 
 	return (
 		<div className='flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
+			<Helmet htmlAttributes>
+        <html lang="en" />
+        <title>Sign up</title>
+      </Helmet>
 			<motion.div
 				className='sm:mx-auto sm:w-full sm:max-w-md'
 				initial={{ opacity: 0, y: -20 }}

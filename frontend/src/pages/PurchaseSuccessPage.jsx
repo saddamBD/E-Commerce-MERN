@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useCartStore } from "../stores/useCartStore";
 import axios from "../lib/axios";
 import Confetti from "react-confetti";
+import { Helmet } from "react-helmet";
 
 const PurchaseSuccessPage = () => {
 	const [isProcessing, setIsProcessing] = useState(true);
@@ -39,6 +40,10 @@ const PurchaseSuccessPage = () => {
 
 	return (
 		<div className='h-screen flex items-center justify-center px-4'>
+			<Helmet htmlAttributes>
+        <html lang="en" />
+        <title>Purchase Success</title>
+      </Helmet>
 			<Confetti
 				width={window.innerWidth}
 				height={window.innerHeight}

@@ -6,12 +6,17 @@ import CartItem from "../components/CartItem";
 import PeopleAlsoBought from "../components/PeopleAlsoBought";
 import OrderSummary from "../components/OrderSummary";
 import GiftCouponCard from "../components/GiftCouponCard";
+import { Helmet } from "react-helmet";
 
 const CartPage = () => {
 	const { cart } = useCartStore();
 
 	return (
 		<div className='py-8 md:py-16'>
+		<Helmet htmlAttributes>
+        <html lang="en" />
+        <title>Cart Page</title>
+      </Helmet>
 			<div className='mx-auto max-w-screen-xl px-4 2xl:px-0'>
 				<div className='mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8'>
 					<motion.div
