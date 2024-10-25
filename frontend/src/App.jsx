@@ -14,8 +14,11 @@ import { useCartStore } from "./stores/useCartStore"
 import PurchaseSuccessPage from "./pages/PurchaseSuccessPage"
 import PurchaseCancelPage from "./pages/PurchaseCancelPage"
 import Footer from "./components/Footer"
-import FAQPage from "./pages/FAQPage"
+import FAQPage from "./pages/footer/FAQPage"
 import ProductDetails from "./pages/ProductDetails"
+import ShippingDelivery from "./pages/footer/ShippingDelivery "
+import ReturnsExchanges from "./pages/footer/ReturnsExchanges"
+import AboutUs from "./pages/footer/AboutUs"
 
 
 
@@ -68,6 +71,10 @@ function App() {
           <Route path='/purchase-cancel' element={user ? <PurchaseCancelPage /> : <Navigate to='/login' />} />
           <Route path='/product/:id' element={user ? <ProductDetails /> : <Navigate to='/login' />} />
           <Route path='/faqs' element={<FAQPage />} />
+          <Route path='/shipping-delivery' element={<ShippingDelivery/>} />
+          <Route path='/return-and-refund' element={<ReturnsExchanges/>} />
+          <Route path='/about-us' element={<AboutUs/>} />
+
       </Routes>
       </div>
       

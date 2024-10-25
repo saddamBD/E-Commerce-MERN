@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import { ShoppingCart, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCartStore } from "../stores/useCartStore";
+import { useUserStore } from "../stores/useUserStore";
 
 const FeaturedProducts = ({ featuredProducts }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [itemsPerPage, setItemsPerPage] = useState(4);
+	const { user } = useUserStore();
 
 	const { addToCart } = useCartStore();
+
+
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -34,6 +38,7 @@ const FeaturedProducts = ({ featuredProducts }) => {
 
 	return (
 		<div className='py-12'>
+			{user && 
 			<div className='container mx-auto px-4'>
 				<h2 className='text-center text-5xl sm:text-6xl font-bold text-emerald-400 mb-4'>Featured</h2>
 				<div className='relative'>
@@ -92,6 +97,7 @@ const FeaturedProducts = ({ featuredProducts }) => {
 					</button>
 				</div>
 			</div>
+}
 		</div>
 	);
 };
