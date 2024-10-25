@@ -17,6 +17,7 @@ import Footer from "./components/Footer"
 import FAQPage from "./pages/FAQPage"
 
 
+
 function App() {
   const {user,checkAuth,checkingAuth} = useUserStore()
   const {getCartItems} = useCartStore()

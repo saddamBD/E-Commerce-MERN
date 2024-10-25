@@ -4,6 +4,7 @@ import CategoryItem from "../components/CategoryItem";
 import { useProductStore } from "../stores/useProductStore";
 import FeaturedProducts from "../components/FeaturedProducts";
 import { Helmet } from "react-helmet";
+import Carousel from "../components/Banner";
 
 
 const categories = [
@@ -30,6 +31,7 @@ const HomePage = () => {
         <html lang="en" />
         <title>Home</title>
       </Helmet>
+	  <Carousel />
 			<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
 				<h1 className='text-center text-5xl sm:text-6xl font-bold text-emerald-400 mb-4'>
 					Explore Our Categories
