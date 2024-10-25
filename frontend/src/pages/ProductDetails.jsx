@@ -8,7 +8,7 @@ import { useUserStore } from "../stores/useUserStore";
 import { useCartStore } from "../stores/useCartStore";
 import toast from "react-hot-toast";
 import { ShoppingCart } from "lucide-react";
-import { useNavigate } from 'react-router-dom';
+
 
 
 const ProductDetails = () => {
@@ -16,12 +16,7 @@ const ProductDetails = () => {
   const { user } = useUserStore();
   const { addToCart } = useCartStore()
 
-  const navigate = useNavigate();
 
-  const handleBack = () => {
-    window.location.reload();
-    navigate(-1);
-  };
 	const handleAddToCart = () => {
         console.log(products)
 		if (!user) {
@@ -69,7 +64,7 @@ const ProductDetails = () => {
           <img
             src={products.image}
             alt={products.name}
-            className="w-full h-auto object-cover rounded-lg shadow-lg"
+            className="w-240 h-350 object-cover rounded-lg shadow-lg"
           />
         </motion.div>
         <motion.div
@@ -93,18 +88,12 @@ const ProductDetails = () => {
 					Add to cart
 		</button>
 
-          <Link
+          <Link reloadDocument
             to={`/category/${products.category}`}
             className="mt-6 inline-block text-emerald-500 hover:underline"
           >
             Back to Products
           </Link>
-      <button
-        onClick={handleBack}
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-      >
-        Go Back
-      </button>
         </motion.div>
       </div>
 
