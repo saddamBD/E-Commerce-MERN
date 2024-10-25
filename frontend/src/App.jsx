@@ -15,6 +15,7 @@ import PurchaseSuccessPage from "./pages/PurchaseSuccessPage"
 import PurchaseCancelPage from "./pages/PurchaseCancelPage"
 import Footer from "./components/Footer"
 import FAQPage from "./pages/FAQPage"
+import ProductDetails from "./pages/ProductDetails"
 
 
 
@@ -65,6 +66,7 @@ function App() {
 						element={user ? <PurchaseSuccessPage /> : <Navigate to='/login' />}
 					/>
           <Route path='/purchase-cancel' element={user ? <PurchaseCancelPage /> : <Navigate to='/login' />} />
+          <Route path='/product/:id' element={user ? <ProductDetails /> : <Navigate to='/login' />} />
           <Route path='/faqs' element={<FAQPage />} />
       </Routes>
       </div>

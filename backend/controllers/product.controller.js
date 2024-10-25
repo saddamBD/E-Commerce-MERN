@@ -2,6 +2,16 @@ import { redis } from "../lib/redis.js";
 import cloudinary from "../lib/cloudinary.js";
 import Product from "../models/product.model.js";
 
+export const getProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id); // find all products
+    res.json({ product });
+  } catch (error) {
+    console.log("Error in getProduct controller", error.message);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
+
 export const getAllProducts = async (req, res) => {
   try {
     const products = await Product.find({}); // find all products
