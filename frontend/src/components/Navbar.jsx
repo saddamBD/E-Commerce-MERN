@@ -27,7 +27,7 @@ const Navbar = () => {
 						>
 							Products
 						</Link>
-						{user && (
+						{user && !isAdmin && (
 							<Link
 								to={"/cart"}
 								className='relative group text-gray-300 hover:text-emerald-400 transition duration-300 

@@ -3,11 +3,11 @@ import { useState } from 'react';
 const Carousel = () => {
   // Array of image URLs
   const images = [
-    '/bn1.png',
+    '/bn5.png',
     '/bn2.png',
     '/bn3.png',	
     '/bn4.png',
-    '/bn5.png'
+    '/bn1.png'
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

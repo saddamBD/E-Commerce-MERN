@@ -19,7 +19,7 @@ const ProductDetails = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
-    sessionStorage.setItem('reload', 'true')
+    window.location.reload();
     navigate(-1);
   };
 	const handleAddToCart = () => {
@@ -99,12 +99,12 @@ const ProductDetails = () => {
           >
             Back to Products
           </Link>
-      {/* <button
+      <button
         onClick={handleBack}
         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
       >
         Go Back
-      </button> */}
+      </button>
         </motion.div>
       </div>
 
