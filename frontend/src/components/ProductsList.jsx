@@ -14,7 +14,7 @@ const ProductsList = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8 }}
 		>
-			<table className=' min-w-full divide-y divide-gray-700'>
+			<table className=' min-w-full divide-y-0 divide-gray-700'>
 				<thead className='bg-gray-700'>
 					<tr>
 						<th

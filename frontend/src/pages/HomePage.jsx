@@ -8,13 +8,14 @@ import Carousel from "../components/Banner";
 
 
 const categories = [
-	{ href: "/jeans", name: "Jeans", imageUrl: "/jeans.jpg" },
-	{ href: "/t-shirts", name: "T-shirts", imageUrl: "/tshirts.jpg" },
-	{ href: "/shoes", name: "Shoes", imageUrl: "/shoes.jpg" },
-	{ href: "/glasses", name: "Glasses", imageUrl: "/glasses.png" },
-	{ href: "/jackets", name: "Jackets", imageUrl: "/jackets.jpg" },
-	{ href: "/suits", name: "Suits", imageUrl: "/suits.jpg" },
-	{ href: "/bags", name: "Bags", imageUrl: "/bags.jpg" },
+	{ href: "/laptops", name: "Laptops", imageUrl: "/laptop.jpg" },
+	{ href: "/monitors", name: "monitors", imageUrl: "/monitor.jpg" },
+	{ href: "/printers", name: "printers", imageUrl: "/printer.jpg" },
+	{ href: "/cameras", name: "cameras", imageUrl: "/camera.jpg" },
+	{ href: "/games", name: "games", imageUrl: "/game.jpg" },
+	{ href: "/headphones", name: "headphones", imageUrl: "/headphone.jpg" },
+	{ href: "/projectors", name: "projectors", imageUrl: "/projector.jpg" },
+	{ href: "/networks", name: "networks", imageUrl: "/network.jpg" },
 ];
 
 const HomePage = () => {
